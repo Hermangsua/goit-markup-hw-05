@@ -146,6 +146,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .telefonlink{
     display: flex;
+    align-items: center;
 }
 /* Button */
 .button {
@@ -226,7 +227,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 /* Our advances */
 
 .our-advance-content{
-    display: flex;
+display: flex;
 }
 .our-advance-content .our-advance-discr:not(:last-child){
 margin-right: 30px;
@@ -476,22 +477,21 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color:var(--primary-white-color);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
-.social-worker-button:hover,
-.social-worker-button:focus{
+.social-worker-list .social-worker-button:hover,
+.social-worker-list .social-worker-button:focus {
     border: none;
     padding: 0;
-    border-radius: 50%;
     background-color:var(--accent-color);
-    cursor: pointer;    
-}
-.social-icon:hover,
-.social-icon:focus {
-    /* background-color: var(--accent-color); */
     cursor: pointer;
+    fill: var(--primary-white-color);
 }
-.social-worker-button:hover .social-icon {
+
+.social-worker-button:hover .social-icon,
+ .social-worker-button:focus .social-icon{
     fill: var(--primary-white-color); 
 }
+
+
 
 /* footer-social links */
 
@@ -568,21 +568,23 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .our-partners-logo-list:focus{
    cursor: pointer;
 }
-.our-partners-logo-list:hover .our-partners-icon{
-     fill: var(--accent-color);
-    
+.our-partners-link:hover .our-partners-icon,
+.our-partners-link:focus .our-partners-icon{
+fill: var(--accent-color);   
 }
-.our-partners-link:hover{
-    border: 1px solid #2196F3;
-    border-radius: 4px;
+.our-partners-link:hover,
+.our-partners-link:focus{
+border: 1px solid #2196F3;
+border-radius: 4px;
 }
 .icon-contact{
+fill: var(--main-text-color);
 transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 margin-right: 10px;    
 }
-.contact-link-header:hover .icon-contact{
+.telefonlink:hover .icon-contact,
+.telefonlink:focus .icon-contact{
 fill: var(--accent-color);
-
 } 
 
 /* HOME-WORK 5 */
@@ -600,6 +602,7 @@ fill: var(--accent-color);
 }
 
 .our-works-discr-title {
+    font-weight: 700;
     margin-top: 0px;
     margin-bottom: 0px;
     padding-top: 27px;
@@ -618,7 +621,7 @@ fill: var(--accent-color);
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
     height: 4px;
     background-color: var(--accent-color);
